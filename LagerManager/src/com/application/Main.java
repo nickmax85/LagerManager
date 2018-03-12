@@ -33,10 +33,6 @@ public class Main extends Application {
 	private static final Logger logger = Logger.getLogger(Main.class);
 	private ResourceBundle resources = ResourceBundle.getBundle("language");
 
-	// Wird automatisch von SVN beschrieben
-	public final static String BUILD = "$Rev: 91 $";
-	public final static String DATE = "$Date: 2018-01-31 11:05:15 +0100 (Mi, 31 Jan 2018) $";
-
 	// Java Entwicklungsversion
 	public final static String JDK = "1.8.0_152";
 
@@ -46,7 +42,7 @@ public class Main extends Application {
 	public static void main(String[] args) {
 
 		launch(args);
-		
+
 	}
 
 	@Override
@@ -63,8 +59,8 @@ public class Main extends Application {
 				userHome + File.separator + resources.getString("appname"), "application.properties");
 		ApplicationProperties.getInstance().setup();
 
-		this.primaryStage.setTitle(resources.getString("appname") + " " + BUILD.replace("$", " ") + "@"
-				+ ApplicationProperties.getInstance().getProperty("db_host"));
+		this.primaryStage.setTitle(
+				resources.getString("appname") + "@" + ApplicationProperties.getInstance().getProperty("db_host"));
 		this.primaryStage
 				.setMaximized(ApplicationProperties.getInstance().getProperty("start_maximized").contains("true"));
 		this.primaryStage.getIcons()
