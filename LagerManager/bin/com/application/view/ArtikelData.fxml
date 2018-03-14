@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.HTMLEditor?>
+
+<AnchorPane fx:id="dataPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.view.ArtikelDataController">
+	<children>
+		<VBox layoutX="10.0" layoutY="320.0" spacing="10.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+			<children>
+				<Label styleClass="label-header" text="Artikel">
+					<font>
+						<Font size="24.0" />
+					</font>
+				</Label>
+				<HBox spacing="10.0">
+					<children>
+						<GridPane hgap="10.0" vgap="10.0">
+							<columnConstraints>
+								<ColumnConstraints minWidth="110.0" />
+								<ColumnConstraints />
+
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints />
+								<RowConstraints />
+								<RowConstraints />
+								<RowConstraints />
+								<RowConstraints />
+								<RowConstraints />
+								<RowConstraints />
+                        <RowConstraints />
+							</rowConstraints>
+							<children>
+								<Label text="Bezeichnung" />
+								<Label text="Lagerort" GridPane.rowIndex="1" />
+								<Label text="K-Nummer" GridPane.rowIndex="2" />
+								<Label text="Equipment" GridPane.rowIndex="3" />
+								<Label text="ausgebaut von" GridPane.rowIndex="4" />
+								<Label text="Stück" GridPane.rowIndex="5" />
+								<Label text="Liefernummer" GridPane.rowIndex="6" />
+								<Label text="Bearbeiter" GridPane.rowIndex="7" />
+								<TextField fx:id="bezeichnungField" minWidth="400.0" GridPane.columnIndex="1" />
+								<ComboBox fx:id="lagerortComboBox" minWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+								<TextField fx:id="komponenteNrField" minWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+								<TextField fx:id="equipmentField" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+								<TextField fx:id="ausgebautVonField" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+								<TextField fx:id="stueckField" maxWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+								<TextField fx:id="lieferNummerField" promptText="ddMMyyyy" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+								<TextField fx:id="editorField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+							</children>
+						</GridPane>
+						<VBox>
+							<children>
+								<ImageView fx:id="pictureImage" fitHeight="200.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../resource/icons/keinBild.png" />
+									</image>
+								</ImageView>
+								<Hyperlink fx:id="pictureFileLink" text="..." />
+							</children>
+						</VBox>
+					</children>
+				</HBox>
+				<GridPane hgap="5.0" vgap="10.0">
+					<columnConstraints>
+						<ColumnConstraints maxWidth="116.0" minWidth="110.0" prefWidth="113.0" />
+						<ColumnConstraints maxWidth="795.0" minWidth="200.0" />
+						<ColumnConstraints />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints vgrow="SOMETIMES" />
+						<RowConstraints vgrow="SOMETIMES" />
+						<RowConstraints vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<Label styleClass="label-bright" text="Anhänge" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+						<Label styleClass="label-bright" text="Info" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+						<HBox alignment="BOTTOM_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+							<children>
+								<ListView fx:id="anhangListView" maxHeight="100.0" maxWidth="300.0" minHeight="100.0" minWidth="300.0" />
+								<Button fx:id="anhaengeButton" mnemonicParsing="false" onAction="#handleAnhaengeButton" text="..." />
+							</children>
+						</HBox>
+						<HTMLEditor fx:id="infoField" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" maxHeight="250.0" maxWidth="600.0" minHeight="250.0" minWidth="600.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+					</children>
+				</GridPane>
+			</children>
+		</VBox>
+		<HBox alignment="CENTER_RIGHT" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+			<children>
+				<Button fx:id="savePngButton" minWidth="200.0" mnemonicParsing="false" onAction="#handleExportScreenshot" text="Bild exportieren" />
+				<Button fx:id="sendMailButton" minWidth="200.0" mnemonicParsing="false" onAction="#handleSendMail" text="Mail versenden" />
+				<Button fx:id="printButton" mnemonicParsing="false" onAction="#handlePrint" text="Drucken" />
+			</children>
+		</HBox>
+	</children>
+</AnchorPane>
