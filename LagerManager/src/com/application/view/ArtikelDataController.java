@@ -26,6 +26,7 @@ import com.application.util.GenerateUID;
 import com.application.view.alert.DeleteYesNoAlert;
 import com.application.view.alert.InputValidatorAlert;
 import com.application.view.alert.NotImplementedAlert;
+import com.application.view.alert.YesNoAlert;
 
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -557,8 +558,16 @@ public class ArtikelDataController {
 		if (data.getBox() != null)
 			nummern.remove(data.getBox());
 
-		if (nummern.contains(lieferNummerField.getText()))
-			text += "Die Liefernummer " + lieferNummerField.getText() + " ist bereits vorhanden!\n";
+		if (nummern.contains(lieferNummerField.getText())) {
+
+			YesNoAlert alert = new YesNoAlert(dialogStage, "LagerManager", "Liefernummer bereits vorhanden",
+					"Soll trotzdem gespeichert werden?");
+			if (!alert.isOKButton()) {
+				// text += "Die Liefernummer " + lieferNummerField.getText() + " ist bereits
+				// vorhanden!\n";
+
+			}
+		}
 
 		if (bezeichnungField.getText() == null || bezeichnungField.getText().length() == 0)
 			text += "Keine gültige Bezeichnung!\n";
