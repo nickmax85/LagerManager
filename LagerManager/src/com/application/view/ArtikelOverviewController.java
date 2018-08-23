@@ -191,7 +191,7 @@ public class ArtikelOverviewController implements Initializable {
 		} catch (IOException e) {
 			logger.info("Ordner files konnte nicht entfernt werden.");
 		}
-		
+
 		try {
 			File dir = new File(System.getProperty("user.home") + File.separator + "LagerManager", "pictures");
 			if (dir.exists())
@@ -200,8 +200,6 @@ public class ArtikelOverviewController implements Initializable {
 			logger.info("Ordner pictures konnte nicht entfernt werden.");
 		}
 
-
-		
 		artikelDataController.setData(data);
 		artikelDataController.setEditable(false);
 

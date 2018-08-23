@@ -311,7 +311,7 @@ public class ArtikelDataController {
 
 					for (File file : db.getFiles()) {
 
-						if (file.getName().endsWith(".jpg")) {
+						if (file.getName().endsWith(".jpg") || file.getName().endsWith(".JPG")) {
 							if (checkFileSize(1024, file)) {
 								filePath = file.getAbsolutePath();
 								pictureFile = file;
