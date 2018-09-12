@@ -32,7 +32,7 @@ public class Main extends Application {
 
 	public final static String VERSION_HAUPT = "1";
 	public final static String VERSION_NEBEN = "0";
-	public final static String REVISION = "0";
+	public final static String REVISION = "1";
 
 	private static final Logger logger = Logger.getLogger(Main.class);
 	private ResourceBundle resources = ResourceBundle.getBundle("language");

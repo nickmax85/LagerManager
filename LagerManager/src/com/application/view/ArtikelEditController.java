@@ -56,7 +56,7 @@ public class ArtikelEditController {
 			artikel.setMaschine(artikelDataController.ausgebautVonField.getText());
 			artikel.setBox(artikelDataController.lieferNummerField.getText());
 			artikel.setStueck(Integer.parseInt(artikelDataController.stueckField.getText()));
-			artikel.setInfo(artikelDataController.infoField.getHtmlText());
+			artikel.setInfo(artikelDataController.infoField.getText());
 			artikel.setAuthor(artikelDataController.editorField.getText());
 			artikel.setPicture(artikelDataController.pictureFile);
 			artikel.setLagerortId(artikelDataController.lagerortComboBox.getSelectionModel().getSelectedItem().getId());

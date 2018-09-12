@@ -45,6 +45,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DialogPane;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -80,7 +81,7 @@ public class ArtikelDataController {
 	@FXML
 	public TextField stueckField;
 	@FXML
-	public HTMLEditor infoField;
+	public TextArea infoField;
 	@FXML
 	public TextField editorField;
 	@FXML
@@ -401,7 +402,7 @@ public class ArtikelDataController {
 			lieferNummerField.setText(uid);
 
 			stueckField.setText(String.valueOf(data.getStueck()));
-			infoField.setHtmlText(data.getInfo());
+			infoField.setText(data.getInfo());
 			editorField.setText(data.getAuthor());
 			anhangListView.setItems(null);
 
@@ -515,7 +516,7 @@ public class ArtikelDataController {
 
 		lieferNummerField.setText("");
 		stueckField.setText("");
-		infoField.setHtmlText("");
+		infoField.setText("");
 		editorField.setText("");
 		anhangListView.setItems(null);
 
@@ -609,7 +610,7 @@ public class ArtikelDataController {
 		data.setMaschine(ausgebautVonField.getText());
 		data.setBox(lieferNummerField.getText());
 		data.setStueck(Integer.parseInt(stueckField.getText()));
-		data.setInfo(infoField.getHtmlText());
+		data.setInfo(infoField.getText());
 		data.setAuthor(editorField.getText());
 		data.setPicture(pictureFile);
 		data.setLagerortId(lagerortComboBox.getSelectionModel().getSelectedItem().getId());
