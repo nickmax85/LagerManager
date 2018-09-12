@@ -56,11 +56,11 @@
 								<TextField fx:id="bezeichnungField" minWidth="400.0" GridPane.columnIndex="1" />
 								<ComboBox fx:id="lagerortComboBox" minWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 								<TextField fx:id="komponenteNrField" minWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-								<TextField fx:id="equipmentField" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-								<TextField fx:id="ausgebautVonField" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+								<TextField fx:id="equipmentField" maxWidth="201.0" prefHeight="31.0" prefWidth="201.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+								<TextField fx:id="ausgebautVonField" maxWidth="301.0" prefHeight="31.0" prefWidth="301.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 								<TextField fx:id="stueckField" maxWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
 								<TextField fx:id="lieferNummerField" promptText="ddMMyyyy" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-								<TextField fx:id="editorField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+								<TextField fx:id="editorField" maxWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
 							</children>
 						</GridPane>
 						<VBox>
@@ -89,7 +89,7 @@
 					</rowConstraints>
 					<children>
 						<Label styleClass="label-bright" text="Anhänge" GridPane.rowIndex="2" GridPane.valignment="TOP" />
-						<Label styleClass="label-bright" text="Info" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+						<Label styleClass="label-bright" text="Bemerkung" GridPane.rowIndex="1" GridPane.valignment="TOP" />
 						<HBox alignment="BOTTOM_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
 							<children>
 								<ListView fx:id="anhangListView" maxHeight="100.0" maxWidth="300.0" minHeight="100.0" minWidth="300.0" />
