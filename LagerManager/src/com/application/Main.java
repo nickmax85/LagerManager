@@ -30,6 +30,10 @@ import javafx.stage.WindowEvent;
 
 public class Main extends Application {
 
+	public final static String VERSION_HAUPT = "1";
+	public final static String VERSION_NEBEN = "0";
+	public final static String REVISION = "0";
+
 	private static final Logger logger = Logger.getLogger(Main.class);
 	private ResourceBundle resources = ResourceBundle.getBundle("language");
 
@@ -59,8 +63,9 @@ public class Main extends Application {
 				userHome + File.separator + resources.getString("appname"), "application.properties");
 		ApplicationProperties.getInstance().setup();
 
-		this.primaryStage.setTitle(
-				resources.getString("appname") + "@" + ApplicationProperties.getInstance().getProperty("db_host"));
+		primaryStage.setTitle(resources.getString("appname") + " " + Main.VERSION_HAUPT + "." + Main.VERSION_NEBEN + "."
+				+ Main.REVISION + "@" + ApplicationProperties.getInstance().getProperty("db_host") + "/"
+				+ ApplicationProperties.getInstance().getProperty("db_model"));
 		this.primaryStage
 				.setMaximized(ApplicationProperties.getInstance().getProperty("start_maximized").contains("true"));
 		this.primaryStage.getIcons()
