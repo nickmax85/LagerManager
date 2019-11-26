@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane onKeyPressed="#handleUpdateKeyEvent" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.view.ArtikelOverviewController">
+<AnchorPane onKeyPressed="#handleUpdateKeyEvent" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.view.ArtikelOverviewController">
    <children>
       <VBox AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -41,9 +41,10 @@
                             <TableColumn fx:id="nameColumn" minWidth="120.0" prefWidth="103.0" text="Bezeichnung" />
                               <TableColumn fx:id="boxColumn" minWidth="100.0" prefWidth="75.0" text="Liefernummer" />
                               <TableColumn fx:id="herstellerColumn" minWidth="100.0" prefWidth="89.0" text="Equipment" />
-                              <TableColumn fx:id="maschineColumn" minWidth="148.0" prefWidth="181.0" text="ausgebaut von" />
+                              <TableColumn fx:id="komponenteNrColumn" minWidth="90.0" prefWidth="75.0" text="K-Nummer" />
+                              <TableColumn fx:id="maschineColumn" minWidth="120.0" prefWidth="181.0" text="ausgebaut von" />
                               <TableColumn fx:id="stueckColumn" minWidth="60.0" prefWidth="52.0" text="Stück" />
-                              <TableColumn fx:id="anhangColumn" minWidth="50.0" prefWidth="60.0" text="Anhänge" />
+                              <TableColumn fx:id="anhangColumn" minWidth="50.0" prefWidth="60.0" text="Anhang" />
                               <TableColumn fx:id="lagerortColumn" minWidth="66.0" prefWidth="117.0" text="Lagerort" />
                           </columns>
                            <columnResizePolicy>

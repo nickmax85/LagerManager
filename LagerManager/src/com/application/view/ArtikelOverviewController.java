@@ -67,6 +67,8 @@ public class ArtikelOverviewController implements Initializable {
 	@FXML
 	private TableColumn<Artikel, String> herstellerColumn;
 	@FXML
+	private TableColumn<Artikel, String> komponenteNrColumn;
+	@FXML
 	private TableColumn<Artikel, String> maschineColumn;
 	@FXML
 	private TableColumn<Artikel, String> boxColumn;
@@ -90,6 +92,7 @@ public class ArtikelOverviewController implements Initializable {
 		nameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
 		herstellerColumn.setCellValueFactory(cellData -> cellData.getValue().herstellerProperty());
 		maschineColumn.setCellValueFactory(cellData -> cellData.getValue().maschineProperty());
+		komponenteNrColumn.setCellValueFactory(cellData -> cellData.getValue().komponenteNrProperty());
 		boxColumn.setCellValueFactory(cellData -> cellData.getValue().boxProperty());
 		stueckColumn.setCellValueFactory(new PropertyValueFactory<Artikel, Integer>("stueck"));
 		stueckColumn.setCellFactory(column -> {
@@ -306,6 +309,11 @@ public class ArtikelOverviewController implements Initializable {
 
 				if (artikel.getHersteller() != null)
 					if (artikel.getHersteller().toLowerCase().contains(lowerCaseFilter)) {
+						return true;
+					}
+				
+				if (artikel.getKomponenteNr() != null)
+					if (artikel.getKomponenteNr().toLowerCase().contains(lowerCaseFilter)) {
 						return true;
 					}
 

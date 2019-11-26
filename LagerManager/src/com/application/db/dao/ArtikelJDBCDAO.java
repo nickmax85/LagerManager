@@ -26,7 +26,7 @@ public class ArtikelJDBCDAO implements ArtikelDAO {
 
 	private static final Logger logger = Logger.getLogger(ArtikelJDBCDAO.class);
 
-	private final static String SELECT_ALL = "SELECT * FROM artikel";
+	private final static String SELECT_ALL = "SELECT * FROM artikel order by name";
 	private final static String INSERT = "INSERT INTO artikel(name, maschine, box, komponenteNr, hersteller, stueck, info, author, picture, lagerort_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	private final static String UPDATE = "UPDATE artikel SET name = ?,  hersteller = ?, maschine = ?, box = ?, komponenteNr = ?, stueck = ?, info = ?, author = ?, picture = ?, lagerort_id = ? WHERE id = ?";
 	private final static String SELECT = "SELECT * FROM artikel where id = ?";
