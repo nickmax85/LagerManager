@@ -62,6 +62,8 @@ public class Main extends Application {
 		ApplicationProperties.configure("application.properties",
 				userHome + File.separator + resources.getString("appname"), "application.properties");
 		ApplicationProperties.getInstance().setup();
+		
+		ApplicationProperties.getInstance().edit("db_host", "ilzmsih01");
 
 		primaryStage.setTitle(resources.getString("appname") + " " + Main.VERSION_HAUPT + "." + Main.VERSION_NEBEN + "."
 				+ Main.REVISION + "@" + ApplicationProperties.getInstance().getProperty("db_host") + "/"
