@@ -5,7 +5,7 @@
 	<session-factory>
 		<!-- Database connection settings -->
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://ilzmsih01:3306/lagermanager</property>
+		<property name="hibernate.connection.url">jdbc:mysql://ilzmsih01.prodln01.net:3306/lagermanager</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">root</property>
 		<property name="hibernate.show_sql">true</property>
